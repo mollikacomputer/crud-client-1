@@ -1,10 +1,10 @@
-import React from 'react';
+
 import {Outlet} from 'react-router-dom';
 
 const Home = () => {
     return (
-        <div>
-            <h2> Home page</h2>
+        <div className='container mx-auto'>
+            <h2 className='text-3xl font-bold'> Home page</h2>
             <Outlet/>
         </div>
     );
