@@ -1,4 +1,5 @@
 const AddUser = () => {
+
     const handleAddUser = event =>{
         event.preventDefault();
         const name = event.target.name.value;
@@ -18,6 +19,7 @@ const AddUser = () => {
             }
         })
     }
+    
     return (
         <div>
             <h2> Add New User</h2>
