@@ -10,6 +10,7 @@ import About from "./Components/About/About";
 import Contact from "./Components/Contact/Contact";
 import Users from "./Components/users/Users";
 import AddUser from "./Components/AddUser/AddUser";
+import UserUpdate from "./Components/userUpdate/UserUpdate";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path:'/adduser',
         element:<AddUser/>
+      },
+      {
+        path:'/userupdate',
+        element:<UserUpdate/>
       }
     ]
   },
