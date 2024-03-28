@@ -4,17 +4,21 @@ import {Link, useLoaderData} from 'react-router-dom';
 const Users = () => {
     // const loadedUser = useLoaderData();
     const loaderUsers = useLoaderData();
+
     const handleDeleteUser = _id =>{
-        console.log("Delete id:", _id);
-        fetch(`http://localhost:5000/users/${_id}`, {method:"DELETE"})
+        console.log("Delete 1st id:", _id);
+        fetch(`http://localhost:5000/users/${_id}`, {
+            method:"DELETE",
+        })
         .then(res => res.json())
-        .then(data =>{
+        .then(data => {
             console.log(data);
-            if(data.deletedCount >0){
-                alert("One User Delete Successfully");
+            if(data.deletedCount > 0){
+                alert("Delete Successfully One Item")
             }
         })
-    };
+    }
+
 
     return (
         <div className='container'>
