@@ -6,20 +6,18 @@ const Users = () => {
     const loaderUsers = useLoaderData();
 
     const handleDeleteUser = _id =>{
-        console.log("Delete 1st id:", _id);
-        fetch(`http://localhost:5000/users/${_id}`, {
+        console.log("Delete :", _id);
+        fetch(`http://localhost:5000/users/${_id}`,{
             method:"DELETE",
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            console.log(data.name);
             if(data.deletedCount > 0){
-                alert("Delete Successfully One Item")
+                alert('Delete successfully id', data._id)
             }
         })
     }
-
-
     return (
         <div className='container'>
             Total User:{loaderUsers.length}
