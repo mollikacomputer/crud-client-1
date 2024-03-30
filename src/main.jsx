@@ -35,8 +35,9 @@ const router = createBrowserRouter([
         element:<AddUser/>
       },
       {
-        path:'/userupdate',
-        element:<UserUpdate/>
+        path:'/userupdate/:id',
+        element:<UserUpdate/>,
+        loader:({params})=> fetch(`http://localhost:5000/users/${params.id}`)
       }
     ]
   },

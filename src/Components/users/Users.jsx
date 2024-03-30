@@ -20,20 +20,17 @@ const Users = () => {
         <div className='container'>
             Total User:{loaderUsers.length}
             <h2 className='text-5xl text-rose-700'> User page</h2>
+            {/* {
+                loaderUsers.map( user => <p key={user._id} > {user.name}: {user.email} </p>)
+            }; */}
             {
-                loaderUsers.map( user => <p key={user._id} > {user.name} : {user.email} and {user._id}
-                
-                <Link to={'/userupdate'}> 
+                loaderUsers.map(user => <p key={user._id} > {user.name} : {user.email} and {user._id}
+                <Link to={`/userupdate/${user._id}`}> 
                 <btn className="btn" >Edit </btn> 
                 </Link>
-                <Link to={`/users`}
-                onClick={()=>handleDeleteUser(user._id)}
-                > X </Link>
+                onClick={()=>handleDeleteUser(user._id)} X
                 </p>)
             }
-            {/* {
-               loadedUser.map( user => <p key={user._id}> {user.name} : {user.email} {user._id}</p>)
-            } */}
         </div>
     );
 };
